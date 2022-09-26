@@ -24,9 +24,9 @@ namespace DB
 class Set;
 using SetPtr = std::shared_ptr<Set>;
 
-struct DagSet
+struct DAGSet
 {
-    DagSet(SetPtr constant_set_, std::vector<const tipb::Expr *> remaining_exprs_)
+    DAGSet(SetPtr constant_set_, std::vector<const tipb::Expr *> remaining_exprs_)
         : constant_set(std::move(constant_set_))
         , remaining_exprs(std::move(remaining_exprs_)){};
     SetPtr constant_set;

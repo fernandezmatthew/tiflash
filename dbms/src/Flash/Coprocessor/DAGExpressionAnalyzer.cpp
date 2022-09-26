@@ -1376,7 +1376,7 @@ void DAGExpressionAnalyzer::makeExplicitSet(
     collators.push_back(getCollatorFromExpr(expr));
     set->setCollators(collators);
     auto remaining_exprs = set->createFromDAGExpr(set_element_types, expr, create_ordered_set);
-    prepared_sets[&expr] = std::make_shared<DagSet>(std::move(set), std::move(remaining_exprs));
+    prepared_sets[&expr] = std::make_shared<DAGSet>(std::move(set), std::move(remaining_exprs));
 }
 
 String DAGExpressionAnalyzer::getActions(const tipb::Expr & expr, const ExpressionActionsPtr & actions, bool output_as_uint8_type)
