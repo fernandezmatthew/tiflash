@@ -21,7 +21,7 @@
 
 #include <Flash/Coprocessor/DAGContext.h>
 #include <Flash/Coprocessor/DAGQueryBlock.h>
-#include <Flash/Coprocessor/DAGSet.h>
+#include <Flash/Coprocessor/DagSet.h>
 #include <Flash/Coprocessor/DAGUtils.h>
 #include <Flash/Coprocessor/TiDBTableScan.h>
 #include <Interpreters/AggregateDescription.h>
@@ -33,8 +33,8 @@
 namespace DB
 {
 class Set;
-using DAGSetPtr = std::shared_ptr<DAGSet>;
-using DAGPreparedSets = std::unordered_map<const tipb::Expr *, DAGSetPtr>;
+using DagSetPtr = std::shared_ptr<DagSet>;
+using DAGPreparedSets = std::unordered_map<const tipb::Expr *, DagSetPtr>;
 
 enum class ExtraCastAfterTSMode
 {
