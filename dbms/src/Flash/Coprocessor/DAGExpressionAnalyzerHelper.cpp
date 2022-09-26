@@ -158,7 +158,7 @@ String DAGExpressionAnalyzerHelper::buildInFunction(
     }
     analyzer->makeExplicitSet(expr, sample_block, false, key_name);
     argument_names.push_back(key_name);
-    const DAGSetPtr & set = analyzer->getPreparedSets()[&expr];
+    const DagSetPtr & set = analyzer->getPreparedSets()[&expr];
 
     ColumnWithTypeAndName column;
     column.type = std::make_shared<DataTypeSet>();
